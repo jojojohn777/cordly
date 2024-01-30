@@ -1,0 +1,68 @@
+var substringMatcher = function(strs) {
+  return function findMatches(q, cb) {
+    var matches, substringRegex;
+
+    // an array that will be populated with substring matches
+    matches = [];
+
+    // regex used to determine if a string contains the substring `q`
+    substrRegex = new RegExp(q, 'i');
+
+    // iterate through the pool of strings and for any string that
+    // contains the substring `q`, add it to the `matches` array
+    $.each(strs, function(i, str) {
+      if (substrRegex.test(str)) {
+        matches.push(str);
+      }
+    });
+
+    cb(matches);
+  };
+};
+
+/*var states = ['Original Mojitos','Lime Mint Mojitos','Raspberry Mojitos','Ginger Mojitos','Green Apple Mojitos',
+'Whole Strawberry Mojitos','Strawberry Mojitos','Kiwi Mojitos',
+];*/
+
+/*var states = ["Original Mojitos","Lime Mint Mojitos","Raspberry Mojitos","Ginger Mojitos","Green Apple Mojitos","Chilli Mojitos","Pomegranate Mojitos","Strawberry Mojitos","Kiwi Mojitos","Orange Mojitos","Whole Strawberry Crush","Strawberry Crush","Lime Crush","Custard Apple Crush","Kiwi Crush","Litchi Crush","Black Currant Crush","Peach And Apricot Crush","Pineapple Crush","Mango Crush","Banana Crush","Mixed Fruit Crush","Figs & Honey Crush","Mulberry Crush","Orange Crush","Grape Crush","Cherry Crush","Musk Melon Crush","Green Apple Crush","WaterMelon Crush","Passion Fruit Crush","Cranberry Crush","Blueberry Crush","Blue Curaco Fruit Twist","Pina Colada Fruit Twist","Kiwi & Strawberry Fruit Twist","Peach & Apricot Fruit Twist","Lemon & Barley Fruit Twist","Panha Fruit Twist","Grenadine (Pomergranate) Fruit Twist","Ginger Ale Fruit Twist","Green Lime Fruit Twist","Strawberry Fruit Twist","Pink Guava Fruit Twist","Green Apple Fruit Twist","Blueberry Fruit Twist","Mulberry Fruit Twist","Raspberry Fruit Twist","Caramel Fruit Twist","Mint Fruit Twist","Vanilla Fruit Twist","Hazelnut Fruit Twist","Kesar Fruit Twist","Lime Ice Tea","Peach Ice Tea","Starwberry Jams","Mix Fruit Jams","Lime Marmalade Jams","Mix Berry Jams","Pineapple Jams","Mulberry Jams","Mango Jams","Orange Marmalade Jams","Raspberry Jams","Apricot Jams","Black Currant Jams","Blueberry Jams","Butterscotch Sauces","Chocolate Sauces","Irish Coffee Sauces","Almond Sauces","Pista Sauces","Hazelnut Sauces","Kesar Badam Pista Sauces","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Sweet Chilli Chutneys","Tender Coconut Crush","Fruit Twist","White Rose Fruit Twist","Litchi Fruit Twist","Limette Fruit Twist","Ginger & Lime Fruit Twist","Jeera Masala Fruit Twist","Fruit Punch Fruit Twist","Cherry Fruit Twist","Grape Fruit Twist","Water Melon Fruit Twist","Orange Fruit Twist","Passion Fruit Fruit Twist","Khus Fruit Twist","Paan Special Fruit Twist","Falsa Fruit Twist","Red Rose Fruit Twist","Kala Khatta Fruit Twist","Grape Fruit Twist","Musk Melon Fruit Twist","Guava Sweet Chilli Chutneys","Pink Guava Crush"];
+*/
+$(document).ready(function() {
+
+$('#the-basics .typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
+},
+{
+  name: 'states',
+  source: substringMatcher(states,status)
+});
+
+});
+// For Remote 
+
+/*
+
+
+var bestPictures = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: '../data/films/post_1960.json',
+  remote: {
+    url: '../data/films/queries/%QUERY.json',
+    wildcard: '%QUERY'
+  }
+});
+
+$('#remote .typeahead').typeahead(null, {
+  name: 'best-pictures',
+  display: 'value',
+  source: bestPictures
+});
+
+
+
+
+
+
+*/

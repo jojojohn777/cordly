@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Morus</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../styles/stylesheet.css">
+<!-- TemplateBeginEditable name="head" -->
+<link type="text/css" rel="stylesheet" href="../styles/lightslider.css">
+<!-- TemplateEndEditable -->
+<script src="../scripts/jquery-3.6.0.min.js"> </script>
+</head>
+
+<body> 
+<header class="wrapper" >
+  <nav class="nav content-wd">
+    <div id="logo"><img src="../images/logo1.png"  width="125" height="53" alt="logo"></div>
+    <ul>
+      <li class="Home"><a href="../index.html">Home</a> </li>
+      <li class="hasdropdown"><a href="../products.html">Our Products</a>
+        <ul class="dropdown">
+          <li><a href="../products.html">MOJITO</a></li>
+          <li><a href="../products.html">FRUIT TWIST</a></li>
+          <li><a href="../products.html">ICE TEA</a></li>
+          <li><a href="../products.html">JAMS</a></li>
+          <li><a href="../products.html">CRUSHES</a></li>
+          <li><a href="../products.html">SAUSES</a></li>
+          <li><a href="../products.html">SWEET CHIILI CHUTNEYS</a></li>
+          <li><a href="../products.html">FRUIT FILLINGS</a></li>
+        </ul>
+      </li>
+      <li><a href="../recipies.html">Recipies</a> </li>
+      <li><a href="../whoweare-AboutUs.html">Who We Are</a> </li>
+      <li><a href="../contactus.html">Contact us</a> </li>
+    </ul>
+    <div class="icons"> <a href="#" class="icon-1">account-icon<span>X</span></a>
+      <div class="register">
+        <div class="flex">
+          <div class="sec"><a href="../Sign-In.html">
+            <div class="sign-in reg" ></div>
+            </a>
+            <div class="text1">
+              <h4><a href="../Sign-In.html" style="text-decoration: none">Sign In</a></h4>
+            </div>
+          </div>
+          <div class="sec"> <a href="../register.html">
+            <div class="new-account reg"></div>
+            </a>
+            <div class="text2">
+              <h4><a href="../register.html" style="text-decoration: none">Register</a></h4>
+            </div>
+          </div>
+          <div class="button">X</div>
+        </div>
+      </div>
+      <a href="../mycart.html" class="icon-2">shopping-icon</a> <a href="#" class="icon-3" ><span>X</span></a>
+      <div id="search-box" style="display: block;">
+        <div style="display: flex">
+          <form action="#" class="search-form">
+            <div style="display: flex">
+              <input type="search" name="search" placeholder="Search Products.." id="search">
+              <input type="submit" value="search">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- TemplateBeginEditable name="EditRegion1" -->
+<section>
+  <div class="banner-bg">
+    <div class="content-wd" id="lightSlider">
+      <div class="banner">
+        <div class="banner-image"><img src="../images/product.png" alt="product"></div>
+        <div class="banner-text">
+          <h1>Nestled in the cradle of <br>
+            nature</h1>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="banner-image1 mm"></div>
+      </div>
+      <div class="banner">
+        <div class="banner-image2 mm"></div>
+      </div>
+      <div class="banner">
+        <div class="banner-image3 mm"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bggrey">
+  <h2>About Us</h2>
+  <div class="bgwhite">
+    <div class="content-wd about-us">
+      <div class="about-ustext">
+        <p>Morus today is synonym for flavored cordials and blends that are next to the real fruit. Our years of research, experience and our endeavour toinnovate and bring incredible flavors and great tasting products to coffeehouses, restaurants, lounges and kitchens pan India is what makes us the most recognised brand in the business of flavored cordials andfruit crushes </p>
+      </div>
+      <div class="aboutus-image"><img src="../images/baner2image.png" alt=""></div>
+      <a href="../whoweare-AboutUs.html" class="orngbtn">Read More</a></div>
+  </div>
+</section>
+<section>
+  <div class="bggrey">
+    <h2>Our Product</h2>
+    <div class="product content-wd " id="lightSlider2" >
+      <div class="productbg"><img src="../images/Layer_15.png" alt="">
+        <h3>Raspberry</h3>
+        <h4>Mojitos </h4>
+        <p>₹215 500ml</p>
+        <div class="elipseset1">
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+        </div>
+        <div class="addtocart">
+          <h4><a href="#" style="text-decoration: none;">Add to cart</a></h4>
+        </div>
+      </div>
+      <div class="productbg" > <img src="../images/product2.png" alt="">
+        <h3>Blueberry</h3>
+        <h4>Fruit Crush</h4>
+        <p>₹230 500ml</p>
+        <div class="elipseset1">
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+        </div>
+        <div class="addtocart">
+          <h4><a href="#" style="text-decoration: none;">Add to cart</a></h4>
+        </div>
+      </div>
+      <div class="productbg" ><img src="../images/product3.png" alt="">
+        <h3>Mulberry</h3>
+        <h4>Fruit Crush</h4>
+        <p>₹315 750ml</p>
+        <div class="elipseset1">
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+          <div class="elipse"></div>
+        </div>
+        <div class="addtocart">
+          <h4><a href="#" style="text-decoration: none;">Add to cart</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="orangebtn2"><a href="../products.html" class="orngbtn1">More Products</a></div>
+</section>
+<section>
+  <div class="bglite">
+    <div class="bggrey">
+      <h2>Recipies</h2>
+    </div>
+    <div class="reciepiesbg content-wd">
+      <div class="drink">
+        <div class="drink1"> <img src="../images/mojito.png" alt=""></div>
+        <h3>The Classic Mojito </h3>
+        <p>Muddle (stir with the wooden spoon) add 
+          all product in shaker, except Sprite / 7up. Cap 
+          and shake vigorously. Pour into serving glass &
+          add any needed ice. Top with Sprite / 7up and 
+          garnish..<a href="#" class="text-decoration">Keep Reading..... </a></p>
+      </div>
+      <div class="drink">
+        <div class="drink1"><img src="../images/smootie.png" alt=""></div>
+        <h3> MilkShake Mania</h3>
+        <p>Place milk, caramel Fruit Twist, Butterscotch Sauce & ice cream in blender container. Cover blend until smooth & thick. Serve immediately.<a href="#" class="text-decoration">Keep Reading..... </a></p>
+      </div>
+      <div class="drink">
+        <div class="drink1"><img src="../images/milshakemania.png" alt=""></div>
+        <h3> Healthy Raspberry
+          Smothie </h3>
+        <p>In a blender container combine all the ingredients. Cover and blend until smooth for about 30 seconds or so. Pour into glasses and serve chilled. Garnish.<a href="#" class="text-decoration">Keep Reading..... </a></p>
+      </div>
+    </div>
+    <div class="orngbtn3"> <a href="../reciepies.html" class="" style="
+     text-decoration: none; ">More Recipies</a></div>
+  </div>
+</section>
+<section>
+  <div class="bgrose" style="text-align: center">
+    <h2 class="social" style="text-align: center">Social</h2>
+    <div class="flexbg">
+      <div class="flex">
+        <div class="bannerlogo"> <img src="../images/logo1.png"  alt=""></div>
+        <div class="text">
+          <h3>Ultimate pastry, Savory & Craft Bevarage Ingredients </h3>
+        </div>
+      </div>
+      <div class="bg content-wd">
+        <div class="icon"><a href="#"><img src="../images/youtube_logo.png" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TemplateEndEditable -->
+<footer>
+  <div class="footerbg">
+    <div class="footer content-wd">
+      <div class="logo"> <img src="../images/logo1.png" alt=""> </div>
+      <div class="line">
+        <hr>
+      </div>
+      <div class="footertext">
+        <p><a href="../index.html">Home </a>. <a href="../whoweare-AboutUs.html">About Us </a>. <a href="../recipies.html" >Recipies </a> . <a href="https://termify.io">Privacy policy </a> .<a href="https://termify.io"> Return Policy </a> .<a href="../contactus.html" > Contact us </a>.<a href="https://termify.io">Terms Of Service</a> . <a href="../Sign-In.html">My Account</a> </p>
+        <div class="footertext2" >
+          <p> Morus Farm  &amp; Foods   Copyright 2019 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+
+	$(document).ready(function(){
+		$(".icon-3").on("click", function(){
+			$(".search-form, .icon-3 span").fadeToggle();	
+		});
+		$(".icon-1").on("click", function(){
+			$(".register, .icon-1 span").fadeToggle();
+			});
+		 var down = document.getElementById("GFG");
+        var el = document.querySelector('.button');
+         
+        el.addEventListener('click', function () {
+            var el2 = document.querySelector('.register');
+            el2.style.display = "none";
+        });
+		
+		
+	})
+
+</script> 
+<!-- TemplateBeginEditable name="EditScriptRegion2" --> 
+<script src="../scripts/lightslider.min.js"></script> 
+<script >
+		  $(document).ready(function() {
+    $("#lightSlider").lightSlider({
+		item: 1,
+		speed: 2000,
+		auto: true,
+		loop: true,
+		pause: 4000		
+	}); 
+	
+  });
+	</script> 
+<!-- TemplateEndEditable -->
+</body>
+</html>

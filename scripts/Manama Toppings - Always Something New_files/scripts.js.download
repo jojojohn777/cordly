@@ -1,0 +1,346 @@
+/*****page loader script start*****/
+
+    var wow = new WOW({
+                    mobile:       false,       // trigger animations on mobile devices (default is true)
+                     });
+
+
+$(window).load(function () {
+
+    "use strict";
+  $("#status").fadeOut();
+  $("#preloader").delay(500).toggleClass("animated slideOutRight").fadeOut(250);
+  $("body").removeClass('scrollLock ');
+    wow.init();
+    
+
+
+var individualProductH = $('.productList .individualProduct').width() + 120;
+var individualProductHSC = $('.productList .individualProduct').width() + $('.productList .individualProduct').width()* 0.65;
+if($(window).width() < 1099)
+{
+$(".productList.innerPages .individualProduct").height(individualProductHSC);
+} else {
+$(".productList.innerPages .individualProduct").height(individualProductH);
+}
+
+
+var featuredRecipesItem = $(".featuredRecipesItem").width() / 1.3;
+var featuredRecipesItemW = $(".featuredRecipesItem").width();
+$("a.recipeItem").height(featuredRecipesItem);      
+$("a.recipeItem").width(featuredRecipesItemW);      
+
+
+    
+});
+/********page loader script end********/
+
+
+$(document).ready(function() {
+
+
+
+
+
+    $(window).scroll(function(){
+
+        //if scrolled down more than the header’s height
+            if ($(window).scrollTop() > aboveHeight){
+
+        // if yes, add “fixed” class to the <nav>
+        // add padding top to the #content 
+        //    (value is same as the height of the nav)
+            $('.shareIcon').addClass('showIcon').css('top','500').next()
+            .css('padding-top','60px');
+
+            } else {
+
+        // when scroll up or less than aboveHeight,
+         //   remove the “fixed” class, and the padding-top
+            $('.shareIcon').removeClass('showIcon').next()
+            .css('padding-top','0');
+            }
+        });
+
+
+/*
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" })
+})
+*/
+
+
+$("a.shareIcon").click(function(){
+
+    $("body").toggleClass("scrollLock");
+    $(".wrapper").toggleClass("pushLeft");
+    $(".header").toggleClass("pushLeft");
+    $(".searchBar").toggleClass("pushLeft");
+    $(".socialBar").toggleClass("opened");
+    $(this).toggleClass("open");
+
+});
+
+$("a.searchIcon").click(function(){
+    $(".searchBar").toggleClass("opened");
+    $(this).toggleClass("open");
+    $('.searchBox')[0].reset();
+
+});
+
+$("a.closeButton").click(function(){
+    $(".searchBar").removeClass("opened");
+    $("a.searchIcon").removeClass("open");
+    $('.searchBox')[0].reset();
+
+
+});
+
+$('a.addTowishlist').click(function(e){
+$(this).toggleClass('added');
+ }) 
+ 
+$('a.addToCart').click(function(e){
+$(this).addClass('added');
+ })
+ 
+$('a.sortToggle').click(function(e){
+$(".sortWindow").toggleClass('active');
+$(this).toggleClass('active');
+ }) 
+
+$('a.myAccountIcon').click(function(e){
+$('div.myAccDiv').toggleClass('open');
+$(this).toggleClass("open");
+ }) 
+ 
+$('a.likeProductButton').click(function(e){
+$(this).toggleClass('liked');
+ }) 
+
+// FeatureBox Resize
+
+$(window).resize(function() {
+
+var individualProductH = $('.productList .individualProduct').width() + 50;
+var individualProductHSC = $('.productList .individualProduct').width() + $('.productList .individualProduct').width()* 0.50;
+if($(window).width() < 1099)
+{
+$(".productList.innerPages .individualProduct").height(individualProductHSC);
+} else {
+$(".productList.innerPages .individualProduct").height(individualProductH);
+}
+
+var featuredRecipesItem = $(".featuredRecipesItem").width() / 1.3;
+var featuredRecipesItemW = $(".featuredRecipesItem").width();
+$("a.recipeItem").height(featuredRecipesItem);      
+$("a.recipeItem").width(featuredRecipesItemW);       
+
+});
+
+
+// Confirm Checkout
+
+$('.confirmOrder').click(function(e){
+$('.reviewOrder').addClass('locked');
+$('.confirmCheckout').fadeIn('500');
+ }); 
+
+
+// EditCheckout
+
+$('.editOrder').click(function(e){
+$('.reviewOrder').removeClass('locked');
+$('.confirmCheckout').fadeOut('500');
+ }); 
+
+
+// Div Radio select
+
+$('div.existing-address.click').click(function () {
+
+   var val =  $(this).find('input:radio').prop('checked')?false:true;
+   $(this).find('input:radio').prop('checked', val);
+});
+
+
+
+$('div.paymentMode').click(function () {
+
+   var val =  $(this).find('input:radio').prop('checked')?false:true;
+   $(this).find('input:radio').prop('checked', val);
+});
+
+
+//Show more address
+
+$('#showaddress').change(function(){
+    if(this.checked) {
+         $('.show-more-address').show();
+    } else {
+        $('.show-more-address').hide();
+    }
+});
+
+
+// $('div.videoBg').vide('video/home/Three-Cocktails'); // Non declarative initialization
+
+
+
+$('.menu').slicknav({
+            label: '',
+            prependTo: 'nav',
+            closedSymbol: '&#43;',
+            openedSymbol: '&#8211;'
+});
+
+
+    //Calculate the height of <header>
+    //Use outerHeight() instead of height() if have padding
+    var aboveHeight = $('.header').outerHeight();
+
+//when scroll
+    $(window).scroll(function(){
+
+        //if scrolled down more than the header’s height
+            if ($(window).scrollTop() > aboveHeight){
+
+        // if yes, add “fixed” class to the <nav>
+        // add padding top to the #content 
+        //    (value is same as the height of the nav)
+            $('.sortWindow').addClass('fixIt').css('top','500');
+
+            } else {
+
+        // when scroll up or less than aboveHeight,
+         //   remove the “fixed” class, and the padding-top
+            $('.sortWindow').removeClass('fixIt');
+            }
+        });
+
+  
+  $(document).on('click', 'a.scrollDown', function(event){                        
+    event.preventDefault();
+    var viewportHeight = $(window).height() + 100;
+
+    $('html, body').animate({
+        scrollTop: viewportHeight,
+        complete: function () {
+            //Hide your button here
+        }
+    }, 750);
+});
+
+  $(document).on('click', 'a.exploreButton', function(event){                        
+    event.preventDefault();
+    var viewportHeight = $(window).height() + 100;
+
+    $('html, body').animate({
+        scrollTop: viewportHeight,
+        complete: function () {
+            //Hide your button here
+        }
+    }, 750);
+});
+   
+
+
+
+$("#faq h3").click(function()
+{
+    $(this).toggleClass('active').next("div.faqAns").slideToggle(750).siblings("div.faqAns").slideUp("slow");
+    $(this).siblings().removeClass('active');
+});
+
+
+$("#distributors h2").click(function()
+{
+    $(this).toggleClass('active').next("div.zones").slideToggle(750).siblings("div.zones").slideUp("slow");
+    $(this).siblings().removeClass('active');
+});
+
+$(".productListDsk").clone().children().appendTo($(".productListMbl"));
+
+
+// Chocolat Gallery
+
+            $(function(){
+                $('.galleryInt, .galleyParent').Chocolat({
+                    imageSize: 'native',
+                    duration: 500
+                });
+                  });
+
+// Scroll Top
+
+$("<a href='javascript:void(0);' id='scrollToTop'></a>").appendTo(".footer");
+
+$(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#scrollToTop').fadeIn();
+        } else {
+            $('#scrollToTop').fadeOut();
+        }
+    });
+    
+    //Click event to scroll to top
+    $('#scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+   //Calculate the height of <header>
+    //Use outerHeight() instead of height() if have padding
+    var aboveHeight = $('.header').outerHeight();
+
+// Address Toggle
+
+                $("#all-addresses h6.address-label").click(function()
+                {
+                    $(this).toggleClass('active').next("div.address-body").slideToggle(300).siblings("div.address-body").slideUp(300);
+                    $(this).siblings().removeClass('active');
+                    $(this).toggleClass('toggle');
+                        $(this).siblings().removeClass('toggle');
+                });
+
+                $('#all-addresses h6.address-label').click(function () {
+
+               var val =  $(this).find('input:radio').prop('checked')?false:true;
+               $(this).find('input:radio').prop('checked', val);
+                });
+
+                $("#show-more-address h6.address-label").click(function()
+                {
+                    $(this).toggleClass('active').next("div.address-body").slideToggle(300).siblings("div.address-body").slideUp(300);
+                    $(this).siblings().removeClass('active');
+                    $(this).toggleClass('toggle');
+                        $(this).siblings().removeClass('toggle');
+                });
+
+                $('#show-more-address h6.address-label').click(function () {
+
+               var val =  $(this).find('input:radio').prop('checked')?false:true;
+               $(this).find('input:radio').prop('checked', val);
+                });
+
+
+                $('#showaddress').change(function(){
+                    if(this.checked) {
+                         $('.show-more-address').show();
+                    } else {
+                        $('.show-more-address').hide();
+                    }
+                });
+
+                // product detail Toggle
+                $("#orderSummary p.product-label").click(function()
+                {
+                    $(this).toggleClass('active').next("div.detail-body").slideToggle(300).siblings("div.detail-body").slideUp(300);
+                    $(this).siblings().removeClass('active');
+                        $(this).toggleClass("toggle")
+                        $(this).parent().parent().siblings().children().children("div.detail-body").slideUp(300);
+                });
+
+
+
+});
